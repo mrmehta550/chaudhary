@@ -1,0 +1,135 @@
+/* ==========================================================================
+   ANNOUNCEMENT BAR - FULLY RESPONSIVE & RIGHT-TO-LEFT MARQUEE
+   ========================================================================== */
+
+.announcement-wrapper {
+  background: var(--bg-deep-charcoal);
+  color: var(--gold-light);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.25);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 50;
+  overflow: hidden;
+}
+
+/* Desktop layout (>= 992px) */
+.announcement-desktop {
+  display: flex;
+  justifyContent: space-between;
+  align-items: center;
+  padding-top: 0.55rem;
+  padding-bottom: 0.55rem;
+  gap: 1rem;
+}
+
+.announcement-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.announcement-dot {
+  color: rgba(223, 202, 141, 0.4);
+  margin: 0 0.25rem;
+}
+
+.announcement-highlight {
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.announcement-wa-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #FFFFFF;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+}
+
+.announcement-wa-link:hover {
+  color: var(--gold-light);
+}
+
+/* Mobile & Tablet Marquee (< 992px) */
+.announcement-mobile-marquee {
+  display: none;
+  width: 100%;
+  overflow: hidden;
+  padding: 0.5rem 0;
+  position: relative;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 4%,
+    black 96%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 4%,
+    black 96%,
+    transparent 100%
+  );
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  will-change: transform;
+  animation: marqueeRightToLeft 26s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  white-space: nowrap;
+  font-size: 0.78rem;
+  letter-spacing: 0.03em;
+}
+
+.marquee-content,
+.marquee-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-light);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.marquee-separator {
+  color: var(--gold-primary);
+  font-size: 0.65rem;
+  opacity: 0.75;
+  margin-right: 0.85rem;
+}
+
+/* Smooth Right to Left infinite scroll */
+@keyframes marqueeRightToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Switching */
+@media (max-width: 991px) {
+  .announcement-desktop {
+    display: none !important;
+  }
+  .announcement-mobile-marquee {
+    display: flex !important;
+  }
+}
