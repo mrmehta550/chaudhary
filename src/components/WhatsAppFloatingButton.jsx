@@ -8,6 +8,7 @@ export default function WhatsAppFloatingButton() {
   return (
     <aside
       aria-label="WhatsApp Concierge"
+      className="wa-floating-aside"
       style={{
         position: "fixed",
         bottom: "2rem",
@@ -19,9 +20,10 @@ export default function WhatsAppFloatingButton() {
         gap: "0.5rem",
       }}
     >
-      {/* Tooltip speech bubble */}
+      {/* Tooltip speech bubble (Desktop only) */}
       {showTooltip && (
         <div
+          className="wa-floating-tooltip"
           style={{
             background: "#FFFFFF",
             color: "var(--text-primary)",
@@ -61,6 +63,7 @@ export default function WhatsAppFloatingButton() {
         href={getGeneralWhatsAppUrl("Instant Catalogue Help")}
         target="_blank"
         rel="noopener noreferrer"
+        className="wa-floating-btn"
         style={{
           width: "56px",
           height: "56px",
@@ -85,8 +88,24 @@ export default function WhatsAppFloatingButton() {
         }}
         title={`Chat with Chaudhary Fashion Mark on WhatsApp: ${shopConfig.whatsapp.displayNumber}`}
       >
-        <MessageCircle size={28} />
+        <MessageCircle size={26} />
       </a>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .wa-floating-aside {
+            bottom: 1rem !important;
+            right: 1rem !important;
+          }
+          .wa-floating-tooltip {
+            display: none !important;
+          }
+          .wa-floating-btn {
+            width: 48px !important;
+            height: 48px !important;
+          }
+        }
+      `}</style>
     </aside>
   );
 }

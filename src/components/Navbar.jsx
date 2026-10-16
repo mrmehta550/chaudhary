@@ -188,9 +188,10 @@ export default function Navbar() {
 
           {/* Header Action Items (Search + WhatsApp CTA) */}
           <div style={{ display: "flex", alignItems: "center", gap: "0.85rem" }}>
-            {/* Search Trigger */}
+            {/* Search Trigger (Hidden on mobile) */}
             <button
               onClick={() => setSearchModalOpen(true)}
+              className="nav-search-btn"
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -210,12 +211,12 @@ export default function Navbar() {
               <span className="search-label" style={{ display: "none" }}>Search</span>
             </button>
 
-            {/* WhatsApp Inquiry CTA */}
+            {/* WhatsApp Inquiry CTA (Hidden on mobile) */}
             <a
               href={getGeneralWhatsAppUrl("Catalogue Inquiry")}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-whatsapp btn-sm"
+              className="btn btn-whatsapp btn-sm nav-whatsapp-btn"
               style={{ display: "inline-flex", textDecoration: "none" }}
             >
               <MessageCircle size={15} />
@@ -229,11 +230,12 @@ export default function Navbar() {
                 display: "none",
                 alignItems: "center",
                 justifyContent: "center",
-                width: "38px",
-                height: "38px",
+                width: "40px",
+                height: "40px",
                 border: "1px solid var(--border-delicate)",
                 borderRadius: "var(--radius-sm)",
                 color: "var(--text-primary)",
+                background: "#FFFFFF",
               }}
               className="mobile-toggle"
               aria-label="Toggle navigation menu"
@@ -313,7 +315,8 @@ export default function Navbar() {
         @media (max-width: 860px) {
           .desktop-nav { display: none !important; }
           .mobile-toggle { display: flex !important; }
-          .wa-text { display: none; }
+          .nav-search-btn { display: none !important; }
+          .nav-whatsapp-btn { display: none !important; }
         }
       `}</style>
     </>
