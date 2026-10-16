@@ -1,0 +1,593 @@
+/**
+ * Chaudhary Fashion Mark - Boutique Catalogue Sample Data
+ * NOTE: All prices and product details are sample demo data for catalogue presentation.
+ */
+
+export const categories = [
+  {
+    id: "sarees",
+    name: "Sarees",
+    shortTitle: "Sarees",
+    tagline: "Woven Grace & Royal Drapes",
+    description: "Handcrafted Kanjivaram, Banarasi Zari, Tissue, Organza and pure silk drapes.",
+    image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=800&q=80",
+    itemCount: 8,
+  },
+  {
+    id: "suits",
+    name: "Women's Suits",
+    shortTitle: "Suits",
+    tagline: "Regal Silhouettes & Fine Weaves",
+    description: "Floor-length Anarkalis, artisanal Shararas, Chikankari sets, and festive straight suits.",
+    image: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=800&q=80",
+    itemCount: 8,
+  },
+  {
+    id: "boys",
+    name: "Boys' Clothing",
+    shortTitle: "Boys' Wear",
+    tagline: "Young Royalty & Celebratory Attire",
+    description: "Embroidered Kurta Pajama sets, Jacquard Nehru jackets, Bandhgalas, and festive sherwanis.",
+    image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+    itemCount: 6,
+  },
+  {
+    id: "girls",
+    name: "Girls' Clothing",
+    shortTitle: "Girls' Wear",
+    tagline: "Festive Sparkle & Heritage Weaves",
+    description: "Miniature Banarasi Lehengas, tiered Anarkali frocks, peplum sharara sets, and festive gowns.",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80",
+    itemCount: 6,
+  },
+];
+
+export const products = [
+  // ================= SAREES =================
+  {
+    id: "CFM-SAR-01",
+    name: "Royal Heritage Banarasi Katan Silk Saree",
+    category: "sarees",
+    categoryLabel: "Sarees",
+    price: 14500,
+    originalPrice: 17800,
+    badge: "Heritage Weave",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: true,
+    isNewArrival: true,
+    fabric: "Pure Katan Silk with Gold & Silver Zari",
+    craft: "Handloom Kadwa Weave from Varanasi",
+    includes: "Unstitched 80cm brocade matching blouse piece",
+    colors: [
+      { name: "Royal Dusty Blue", hex: "#6E8294" },
+      { name: "Crimson Red", hex: "#8A1C2C" },
+      { name: "Champagne Gold", hex: "#D4AF37" },
+    ],
+    sizes: ["Standard Saree (5.5m) + Blouse (0.8m)"],
+    images: [
+      "/hero-banner.jpg",
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "A masterwork of timeless Indian artistry. This pure Katan silk saree features intricate silver and antique gold zari boota motifs gracefully woven throughout the body, flanked by a stately imperial border and opulent pallu. Perfect for prestigious wedding receptions and landmark festivities.",
+    careInstructions: "Strictly dry clean only. Store wrapped in pure muslin cloth.",
+  },
+  {
+    id: "CFM-SAR-02",
+    name: "Kanchipuram Temple Border Pure Silk Saree",
+    category: "sarees",
+    categoryLabel: "Sarees",
+    price: 18900,
+    originalPrice: 22500,
+    badge: "Pure Silk Mark",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: true,
+    isNewArrival: false,
+    fabric: "Heavy Mulberry Silk with Pure Metallic Zari",
+    craft: "Authentic Korvai Weave with Traditional Temple Gopuram Borders",
+    includes: "Contrasting unstitched silk blouse piece",
+    colors: [
+      { name: "Emerald Forest Green", hex: "#1C4E3D" },
+      { name: "Rani Pink", hex: "#B8255F" },
+      { name: "Deep Maroon", hex: "#5C1D24" },
+    ],
+    sizes: ["Standard Saree (5.5m) + Blouse (0.8m)"],
+    images: [
+      "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Hand-woven by generational artisans, this exquisite Kanchipuram drape boasts authentic Korvai craftsmanship where contrasting jewel-toned borders join the body seamlessly. Adorned with sacred temple architecture motifs and glistening zari pallu.",
+    careInstructions: "Dry clean only. Air out occasionally in shade.",
+  },
+  {
+    id: "CFM-SAR-03",
+    name: "Hand-Painted Floral Pastel Organza Saree",
+    category: "sarees",
+    categoryLabel: "Sarees",
+    price: 9200,
+    originalPrice: 11500,
+    badge: "Contemporary Luxe",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: false,
+    isNewArrival: true,
+    fabric: "Sheer Silk Organza with Scalloped Gota Patti Hem",
+    craft: "Hand-painted Botanical Watercolours & Cutwork Embroidery",
+    includes: "Raw silk designer embroidered unstitched blouse piece",
+    colors: [
+      { name: "Blush Peach", hex: "#F4C2B2" },
+      { name: "Mint Sage", hex: "#B2CFBE" },
+      { name: "Pale Lavender", hex: "#D6C7E2" },
+    ],
+    sizes: ["Standard Saree (5.5m) + Blouse (0.8m)"],
+    images: [
+      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Ethereal and featherlight, this organza drape showcases delicate botanical brushstrokes hand-painted by master artists, finished with fine scalloped borders highlighted with subtle sequins and cut-dana work.",
+    careInstructions: "Specialist dry clean only. Do not iron directly on paintwork.",
+  },
+  {
+    id: "CFM-SAR-04",
+    name: "Tissue Chanderi Zardozi Embroidered Saree",
+    category: "sarees",
+    categoryLabel: "Sarees",
+    price: 12800,
+    originalPrice: 15200,
+    badge: "Festive Edit",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: true,
+    isNewArrival: false,
+    fabric: "Metallic Silk Tissue Chanderi",
+    craft: "Handcrafted Zardozi, Resham & Pearl Embroidery",
+    includes: "Heavy embroidered raw silk blouse fabric (1m)",
+    colors: [
+      { name: "Champagne Ivory", hex: "#EDE4D3" },
+      { name: "Rose Gold", hex: "#CBA398" },
+      { name: "Muted Ochre", hex: "#C79D4C" },
+    ],
+    sizes: ["Standard Saree (5.5m) + Blouse (1m)"],
+    images: [
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Radiating an otherworldly metallic sheen, this tissue Chanderi saree catches ambient candlelight gorgeously. Trimmed with hand-executed zardozi and delicate seed pearl border.",
+    careInstructions: "Dry clean only.",
+  },
+  {
+    id: "CFM-SAR-05",
+    name: "Double Ikkat Patola Heritage Weave Saree",
+    category: "sarees",
+    categoryLabel: "Sarees",
+    price: 21500,
+    originalPrice: 26000,
+    badge: "Artisanal Heirloom",
+    availabilityStatus: "Limited Stock",
+    isFeatured: false,
+    isNewArrival: false,
+    fabric: "Pure Mulberry Silk",
+    craft: "Traditional Resist Dye Patan Double Ikkat Geometry",
+    includes: "Coordinated pure silk blouse fabric",
+    colors: [
+      { name: "Vermilion & Mustard", hex: "#B32821" },
+      { name: "Indigo & Rust", hex: "#263B59" },
+    ],
+    sizes: ["Standard Saree (5.5m) + Blouse (0.8m)"],
+    images: [
+      "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "An enduring symbol of Indian royal heritage. Intricate geometric flora and elephant motifs emerge through warp and weft tie-dye mastery, yielding an identical design on both sides.",
+    careInstructions: "Dry clean only. Roll periodically to preserve folds.",
+  },
+  {
+    id: "CFM-SAR-06",
+    name: "Embroidered Tussar Georgette Drape Saree",
+    category: "sarees",
+    categoryLabel: "Sarees",
+    price: 8400,
+    originalPrice: 10200,
+    badge: "Boutique Pick",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: false,
+    isNewArrival: true,
+    fabric: "Semi-Pure Georgette with Tussar Silk Pallu",
+    craft: "Fine Aari Thread Work with Antique Dabka Trims",
+    includes: "Designer unstitched blouse piece",
+    colors: [
+      { name: "Warm Terracotta", hex: "#B95B43" },
+      { name: "Olive Moss", hex: "#556448" },
+      { name: "Midnight Navy", hex: "#1A2535" },
+    ],
+    sizes: ["Standard Saree (5.5m) + Blouse (0.8m)"],
+    images: [
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Effortless elegance with flattering drape and fluid movement. Features hand-worked foliage motifs along the pleats and a rich textured silk pallu.",
+    careInstructions: "Dry clean only.",
+  },
+
+  // ================= WOMEN'S SUITS =================
+  {
+    id: "CFM-SUI-01",
+    name: "Embroidered Silk Anarkali Suit with Organza Dupatta",
+    category: "suits",
+    categoryLabel: "Women's Suits",
+    price: 11200,
+    originalPrice: 13900,
+    badge: "Bestseller",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: true,
+    isNewArrival: true,
+    fabric: "Pure Raw Silk Kurta, Shantoon Pants & Silk Organza Dupatta",
+    craft: "Gota Patti, Mirror Accents & Mukaish Detailing",
+    includes: "Flared 48-inch Anarkali kurta, churidar pants, and 2.5m dupatta",
+    colors: [
+      { name: "Ivory Cream & Antique Gold", hex: "#F3EDE2" },
+      { name: "Powder Blue", hex: "#9EB6C8" },
+      { name: "Dusty Rose", hex: "#C78D97" },
+    ],
+    sizes: ["Semi-Stitched", "S (36)", "M (38)", "L (40)", "XL (42)", "XXL (44)"],
+    images: [
+      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "A grand 24-kali flared Anarkali silhouette designed with a fitted yoke embellished with authentic Rajasthani gota patti work. Styled with a lightweight organza dupatta fringed with golden tassels.",
+    careInstructions: "Dry clean only. Steam iron inside out.",
+  },
+  {
+    id: "CFM-SUI-02",
+    name: "Lucknowi Chikankari & Mukaish Georgette Sharara Set",
+    category: "suits",
+    categoryLabel: "Women's Suits",
+    price: 9800,
+    originalPrice: 12000,
+    badge: "Hand Embroidered",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: true,
+    isNewArrival: false,
+    fabric: "Viscose Georgette with Pure Mulmul Lining",
+    craft: "Hand-embroidery Bakhiya, Phanda & Real Silver Mukaish badla",
+    includes: "Short peplum kurta, flared tiered sharara & matching dupatta",
+    colors: [
+      { name: "Pistachio Green", hex: "#A8BCA1" },
+      { name: "Buttercup Lemon", hex: "#F1E2A3" },
+      { name: "Lilac Lavender", hex: "#CDBADB" },
+    ],
+    sizes: ["Ready to Wear (S to XXL)", "Custom Boutique Fit Available"],
+    images: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Crafted by traditional Awadhi karigars over weeks of patient embroidery. Soft pastels combined with twinkling mukaish stars make this sharara ensemble a dream for mehendi and daytime celebrations.",
+    careInstructions: "Gentle dry clean only.",
+  },
+  {
+    id: "CFM-SUI-03",
+    name: "Royal Velvet Zardozi Embroidered Winter Suit",
+    category: "suits",
+    categoryLabel: "Women's Suits",
+    price: 15400,
+    originalPrice: 18500,
+    badge: "Winter Festive",
+    availabilityStatus: "Limited Stock",
+    isFeatured: false,
+    isNewArrival: true,
+    fabric: "Micro Velvet Kurta & Trousers with Tissue Zari Dupatta",
+    craft: "Heavy French Wire, Dabka & Antique Gold Zardozi Work",
+    includes: "Straight cut velvet kurta, tailored cigarette pants & woven dupatta",
+    colors: [
+      { name: "Imperial Burgundy", hex: "#4C1420" },
+      { name: "Emerald Forest", hex: "#1A3B2F" },
+      { name: "Midnight Teal", hex: "#112F38" },
+    ],
+    sizes: ["S (36)", "M (38)", "L (40)", "XL (42)"],
+    images: [
+      "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Opulent micro velvet in jewel tones, hand-embroidered with majestic zardozi motifs across the neckline, sleeve cuffs and daman. Ideal for winter weddings and evening banquets.",
+    careInstructions: "Specialized dry clean only.",
+  },
+  {
+    id: "CFM-SUI-04",
+    name: "Chanderi Silk Straight Kurta & Gharara Ensemble",
+    category: "suits",
+    categoryLabel: "Women's Suits",
+    price: 7600,
+    originalPrice: 9400,
+    badge: "Festive Pick",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: false,
+    isNewArrival: false,
+    fabric: "Woven Chanderi Silk with Cotton Silk Lining",
+    craft: "Marodi Work & Zari Jacquard Weaving",
+    includes: "Calf-length straight kurta, dramatic flared gharara & tissue dupatta",
+    colors: [
+      { name: "Marigold Ochre", hex: "#CF9B32" },
+      { name: "Wine Berry", hex: "#5B2138" },
+    ],
+    sizes: ["Semi-Stitched", "M", "L", "XL"],
+    images: [
+      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "The flared vintage gharara silhouette is revived with contemporary finesse. Highlighted with fine Marodi embroidery along the flared knee band.",
+    careInstructions: "Dry clean recommended.",
+  },
+  {
+    id: "CFM-SUI-05",
+    name: "Pure Chiffon Floral Jaal Pakistani Cut Suit",
+    category: "suits",
+    categoryLabel: "Women's Suits",
+    price: 8900,
+    originalPrice: 11000,
+    badge: "New Trend",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: false,
+    isNewArrival: true,
+    fabric: "Pure Bemberg Chiffon with Pure Shantoon Bottoms",
+    craft: "Resham Thread Jaal, Cutwork Daman & Pearl Embellishments",
+    includes: "Longline slit kurta, wide palazzo & printed dupatta",
+    colors: [
+      { name: "Seafoam Aqua", hex: "#7DA69E" },
+      { name: "Mauve Pearl", hex: "#9E7B87" },
+    ],
+    sizes: ["S", "M", "L", "XL", "Custom Stitching on Request"],
+    images: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Lightweight breezy silhouette featuring delicate floral vine embroidery spreading across the front panel, trimmed with cutwork lace detailing.",
+    careInstructions: "Dry clean only.",
+  },
+
+  // ================= BOYS' CLOTHING =================
+  {
+    id: "CFM-BOY-01",
+    name: "Royal Jacquard Silk Sherwani Set with Churidar",
+    category: "boys",
+    categoryLabel: "Boys' Clothing",
+    price: 5400,
+    originalPrice: 6800,
+    badge: "Royal Mini",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: true,
+    isNewArrival: true,
+    fabric: "Brocade Jacquard Silk & Pure Cotton Lining",
+    craft: "Mandarin Collar with Antique Metal Buttons & Pocket Square",
+    includes: "Tailored Sherwani coat, soft cotton-silk inner kurta & churidar",
+    colors: [
+      { name: "Regal Ivory & Gold", hex: "#EBE3D0" },
+      { name: "Navy Blue & Gold", hex: "#1C2740" },
+      { name: "Maroon Crimson", hex: "#5A1E28" },
+    ],
+    sizes: ["2-3 Yrs", "4-5 Yrs", "6-7 Yrs", "8-9 Yrs", "10-12 Yrs", "13-14 Yrs"],
+    images: [
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Dress your young prince in dignified regal attire. Structured tailored sherwani cut from lustrous brocade jacquard, tailored with smooth interior cotton lining for maximum comfort during long wedding ceremonies.",
+    careInstructions: "Dry clean only. Hang on padded coat hanger.",
+  },
+  {
+    id: "CFM-BOY-02",
+    name: "Embroidered Kurta Pajama with Nehru Jacket Set",
+    category: "boys",
+    categoryLabel: "Boys' Clothing",
+    price: 3950,
+    originalPrice: 4800,
+    badge: "Bestseller",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: true,
+    isNewArrival: false,
+    fabric: "Raw Silk Blend Jacket with Breathable Pure Cotton Kurta Set",
+    craft: "Resham Floral Thread Embroidery on Modi/Nehru Waistcoat",
+    includes: "Embroidered Nehru jacket, solid long kurta & comfort pajama",
+    colors: [
+      { name: "Mustard & Off-White", hex: "#D69F3D" },
+      { name: "Pista Green & Beige", hex: "#91A987" },
+      { name: "Peach Coral & Cream", hex: "#DDA08C" },
+    ],
+    sizes: ["2-3 Yrs", "4-5 Yrs", "6-7 Yrs", "8-9 Yrs", "10-12 Yrs"],
+    images: [
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "A versatile 3-piece celebratory set. The lightweight Nehru waistcoat can be styled over the kurta for rituals or removed for hassle-free playtime.",
+    careInstructions: "Gentle dry clean or cold gentle hand wash for kurta.",
+  },
+  {
+    id: "CFM-BOY-03",
+    name: "Jodhpuri Bandhgala Suit & Trousers for Boys",
+    category: "boys",
+    categoryLabel: "Boys' Clothing",
+    price: 4900,
+    originalPrice: 6200,
+    badge: "Heritage Cut",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: false,
+    isNewArrival: true,
+    fabric: "High-Grade Suiting Fabric with Satin Lining",
+    craft: "Hand-embossed Royal Crest Buttons & Contrast Piping",
+    includes: "Structured Bandhgala jacket & tailored formal trousers",
+    colors: [
+      { name: "Midnight Black", hex: "#1A1A1A" },
+      { name: "Royal Sapphire Blue", hex: "#182C4A" },
+      { name: "Charcoal Slate", hex: "#383B40" },
+    ],
+    sizes: ["4-5 Yrs", "6-7 Yrs", "8-9 Yrs", "10-11 Yrs", "12-14 Yrs"],
+    images: [
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Classic Rajasthani regal styling tailored for young gentlemen. High standing collar, shoulder padding, and crested brass buttons deliver an immaculate profile.",
+    careInstructions: "Dry clean only.",
+  },
+  {
+    id: "CFM-BOY-04",
+    name: "Festive Silk Dhoti Kurta with Stole Set",
+    category: "boys",
+    categoryLabel: "Boys' Clothing",
+    price: 3200,
+    originalPrice: 3900,
+    badge: "Traditional Puja Edit",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: false,
+    isNewArrival: false,
+    fabric: "Chanderi Cotton Silk with Elasticated Pre-Stitched Dhoti",
+    craft: "Gota Border Detailing & Angrakha Cross-Over Cut",
+    includes: "Angrakha style kurta, ready-to-wear stitched dhoti & mini dupatta",
+    colors: [
+      { name: "Saffron Turmeric", hex: "#DF8B2B" },
+      { name: "Ruby Red", hex: "#9E2333" },
+    ],
+    sizes: ["1-2 Yrs", "3-4 Yrs", "5-6 Yrs", "7-8 Yrs"],
+    images: [
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Authentic ethnic grace without any tying hassle. Pre-stitched soft dhoti with soft elastic waist keeps kids comfortable while looking traditional for festivals and puja ceremonies.",
+    careInstructions: "Hand wash with mild detergent.",
+  },
+
+  // ================= GIRLS' CLOTHING =================
+  {
+    id: "CFM-GIRL-01",
+    name: "Banarasi Silk Brocade Miniature Lehenga Choli",
+    category: "girls",
+    categoryLabel: "Girls' Clothing",
+    price: 4800,
+    originalPrice: 6200,
+    badge: "Princess Edit",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: true,
+    isNewArrival: true,
+    fabric: "Pure Brocade Silk Skirt with Soft Cotton Inner Lining",
+    craft: "Gold Zari Floral Weave, Latkan Tassels & Net Dupatta",
+    includes: "Flared lehenga skirt, embroidered choli blouse & net dupatta",
+    colors: [
+      { name: "Rani Pink & Gold", hex: "#B82458" },
+      { name: "Turquoise Blue & Gold", hex: "#1F7B8C" },
+      { name: "Sunshine Yellow", hex: "#DBA326" },
+    ],
+    sizes: ["2-3 Yrs", "4-5 Yrs", "6-7 Yrs", "8-9 Yrs", "10-12 Yrs", "13-14 Yrs"],
+    images: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80",
+      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "A royal heirloom-inspired lehenga specially crafted for little girls. Flared silhouette with cancan support for bounce, tailored with soft skin-friendly cotton lining to prevent itching.",
+    careInstructions: "Dry clean only. Do not bleach.",
+  },
+  {
+    id: "CFM-GIRL-02",
+    name: "Embroidered Peplum Kurti & Flared Sharara Set",
+    category: "girls",
+    categoryLabel: "Girls' Clothing",
+    price: 3600,
+    originalPrice: 4500,
+    badge: "Bestseller",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: true,
+    isNewArrival: false,
+    fabric: "Georgette with Soft Shantoon Lining",
+    craft: "Mirror Work, Resham Threadwork & Gota Patti Lace",
+    includes: "Fitted peplum frock kurti, tiered flared sharara & matching dupatta",
+    colors: [
+      { name: "Pastel Lavender", hex: "#C7B2D6" },
+      { name: "Mint Sage Green", hex: "#A5C4AF" },
+      { name: "Peach Coral", hex: "#E59E87" },
+    ],
+    sizes: ["3-4 Yrs", "5-6 Yrs", "7-8 Yrs", "9-10 Yrs", "11-12 Yrs"],
+    images: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Breezy, playful and twirl-ready! Peplum kurti embellished with mirror accents, paired with voluminous tiered sharara pants that make festive dancing unforgettable.",
+    careInstructions: "Gentle dry clean recommended.",
+  },
+  {
+    id: "CFM-GIRL-03",
+    name: "Tiered Floor-Length Festive Gown with Dupatta",
+    category: "girls",
+    categoryLabel: "Girls' Clothing",
+    price: 4400,
+    originalPrice: 5600,
+    badge: "Partywear",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: false,
+    isNewArrival: true,
+    fabric: "Multi-Tiered Soft Net & Shimmer Silk with Satin Lining",
+    craft: "Sequin Embroidered Bodice & Scallop Lace Trim",
+    includes: "Full-length flare gown and lightweight net dupatta",
+    colors: [
+      { name: "Rose Gold Blush", hex: "#D49D97" },
+      { name: "Champagne Ivory", hex: "#E7DCBF" },
+      { name: "Sky Powder Blue", hex: "#8DAEC4" },
+    ],
+    sizes: ["4-5 Yrs", "6-7 Yrs", "8-9 Yrs", "10-12 Yrs"],
+    images: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "A fairytale princess gown with Indian ethnic flair. The sparkling sequined yoke transitions into multiple cascading tiers of soft net, offering grand volume without excess weight.",
+    careInstructions: "Dry clean only.",
+  },
+  {
+    id: "CFM-GIRL-04",
+    name: "Traditional Bandhani Print Anarkali Frock Set",
+    category: "girls",
+    categoryLabel: "Girls' Clothing",
+    price: 2850,
+    originalPrice: 3500,
+    badge: "Heritage Craft",
+    availabilityStatus: "In Stock at Store",
+    isFeatured: false,
+    isNewArrival: false,
+    fabric: "Pure Cotton Silk with Organic Vegetable Dye Prints",
+    craft: "Authentic Gujarati Bandhej Motif & Gota Kinari Borders",
+    includes: "Twirl Anarkali frock, stretchable churidar & matching printed dupatta",
+    colors: [
+      { name: "Festive Crimson Red", hex: "#B32431" },
+      { name: "Royal Indigo", hex: "#233D6B" },
+    ],
+    sizes: ["2-3 Yrs", "4-5 Yrs", "6-7 Yrs", "8-9 Yrs"],
+    images: [
+      "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=900&q=80",
+    ],
+    description:
+      "Vibrant traditional Bandhej patterns on silky soft fabric. Designed with sweet potli button closures and lightweight fabric so little girls can enjoy family functions happily.",
+    careInstructions: "Gentle cold hand wash.",
+  },
+];
+
+/**
+ * Filter and query helpers
+ */
+export function getProductById(id) {
+  return products.find((p) => p.id === id);
+}
+
+export function getProductsByCategory(category) {
+  if (!category || category === "all") return products;
+  return products.filter((p) => p.category.toLowerCase() === category.toLowerCase());
+}
+
+export function getFeaturedProducts() {
+  return products.filter((p) => p.isFeatured);
+}
+
+export function getNewArrivals() {
+  return products.filter((p) => p.isNewArrival);
+}

@@ -1,0 +1,495 @@
+/* ==========================================================================
+   CHAUDHARY FASHION MARK - LUXURY BOUTIQUE DESIGN SYSTEM
+   Palette: Warm Ivory, Cream, Champagne Gold, Deep Charcoal, Warm Brown
+   ========================================================================== */
+
+:root {
+  /* Background Palette */
+  --bg-body: #FAF7F2;
+  --bg-cream: #F5EFEB;
+  --bg-ivory: #FFFDF9;
+  --bg-surface: #FFFFFF;
+  --bg-subtle: #F0EAE1;
+  --bg-dark-emerald: #142721;
+  --bg-deep-charcoal: #1A1817;
+
+  /* Typography Colors */
+  --text-primary: #1F1C1B;
+  --text-secondary: #574F49;
+  --text-muted: #8C8075;
+  --text-light: #FAF7F2;
+  --text-gold: #B88E3E;
+
+  /* Accent & Gold Tokens */
+  --gold-primary: #C5A059;
+  --gold-light: #E7D5A4;
+  --gold-dark: #9A7731;
+  --gold-gradient: linear-gradient(135deg, #EAD7AC 0%, #C5A059 50%, #9B762D 100%);
+  --gold-sheen: linear-gradient(90deg, transparent, rgba(223, 202, 141, 0.4), transparent);
+  --gold-border: rgba(197, 160, 89, 0.35);
+  --gold-glow: rgba(197, 160, 89, 0.2);
+
+  /* Borders & Dividers */
+  --border-delicate: #E7DFD4;
+  --border-card: #ECE4D8;
+  --border-focus: #C5A059;
+
+  /* WhatsApp Brand Green */
+  --wa-green: #25D366;
+  --wa-dark: #128C7E;
+  --wa-green-hover: #20BA5A;
+
+  /* Typography Families */
+  --font-serif: 'Cormorant Garamond', Garamond, Georgia, serif;
+  --font-display: 'Cinzel', 'Cormorant Garamond', serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 2px 8px rgba(33, 29, 28, 0.04);
+  --shadow-md: 0 8px 24px rgba(33, 29, 28, 0.07);
+  --shadow-lg: 0 16px 40px rgba(33, 29, 28, 0.1);
+  --shadow-gold: 0 8px 25px rgba(197, 160, 89, 0.22);
+
+  /* Transitions */
+  --transition-smooth: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+  --radius-full: 9999px;
+}
+
+/* Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-body);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(rgba(197, 160, 89, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(197, 160, 89, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px, 20px 20px;
+  background-position: 0 0, 20px 20px;
+}
+
+/* Selection */
+::selection {
+  background: var(--gold-light);
+  color: var(--bg-deep-charcoal);
+}
+
+/* Typography Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: var(--transition-smooth);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* ==========================================================================
+   BOUTIQUE UI ACCENTS & MOTIFS
+   ========================================================================== */
+
+/* Section Headers */
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 3.5rem;
+  position: relative;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 0.75rem;
+}
+
+.section-eyebrow::before,
+.section-eyebrow::after {
+  content: "";
+  display: inline-block;
+  width: 28px;
+  height: 1px;
+  background: var(--gold-primary);
+  opacity: 0.6;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.9rem;
+  letter-spacing: -0.015em;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  font-weight: 400;
+}
+
+.ornament-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin: 1.25rem 0 0;
+  color: var(--gold-primary);
+}
+
+.ornament-divider::before,
+.ornament-divider::after {
+  content: "";
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+}
+
+/* Gold Floral Motif Symbol */
+.gold-lotus-motif {
+  color: var(--gold-primary);
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+}
+
+/* ==========================================================================
+   BUTTONS & ACTIONS
+   ========================================================================== */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Primary Boutique Button */
+.btn-primary {
+  background: var(--bg-deep-charcoal);
+  color: #FAF6EF;
+  border: 1px solid rgba(223, 202, 141, 0.4);
+  box-shadow: 0 4px 15px rgba(26, 24, 23, 0.15);
+}
+
+.btn-primary:hover {
+  background: #2D2927;
+  border-color: var(--gold-primary);
+  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.25);
+  transform: translateY(-2px);
+  color: #FFFFFF;
+}
+
+/* Gold Accent Button */
+.btn-gold {
+  background: var(--gold-gradient);
+  color: #1A1817;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 16px rgba(197, 160, 89, 0.35);
+}
+
+.btn-gold:hover {
+  filter: brightness(1.06);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(197, 160, 89, 0.48);
+}
+
+/* Outline Gold Button */
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--gold-primary);
+}
+
+.btn-outline:hover {
+  background: var(--gold-primary);
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* WhatsApp Boutique Button */
+.btn-whatsapp {
+  background: #25D366;
+  color: #FFFFFF;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.28);
+}
+
+.btn-whatsapp:hover {
+  background: #1EBE5D;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(37, 211, 102, 0.38);
+  color: #FFFFFF;
+}
+
+.btn-whatsapp-outline {
+  background: rgba(37, 211, 102, 0.08);
+  color: #1A8A48;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  font-weight: 600;
+}
+
+.btn-whatsapp-outline:hover {
+  background: #25D366;
+  color: #FFFFFF;
+  border-color: #25D366;
+  transform: translateY(-2px);
+}
+
+.btn-sm {
+  padding: 0.55rem 1.1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+}
+
+.btn-lg {
+  padding: 1.05rem 2.25rem;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   BADGES & PILLS
+   ========================================================================== */
+
+.badge-luxury {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.75rem;
+  background: rgba(197, 160, 89, 0.12);
+  color: var(--gold-dark);
+  border: 1px solid var(--gold-border);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: var(--radius-sm);
+}
+
+.badge-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  background: #F4EFEB;
+  color: var(--text-muted);
+  border: 1px dashed var(--border-delicate);
+  font-size: 0.7rem;
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+}
+
+.badge-stock {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.7rem;
+  background: #EAF7EE;
+  color: #186E37;
+  border: 1px solid rgba(24, 110, 55, 0.2);
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+
+/* ==========================================================================
+   CARDS & LUXURY FRAMING
+   ========================================================================== */
+
+.boutique-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-smooth);
+  position: relative;
+}
+
+.boutique-card:hover {
+  border-color: var(--gold-light);
+  box-shadow: var(--shadow-md);
+}
+
+/* Gold Accent Corner Borders */
+.gold-frame {
+  position: relative;
+}
+
+.gold-frame::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 1px solid var(--gold-border);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   INPUTS & FORMS
+   ========================================================================== */
+
+.input-luxury {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  transition: var(--transition-smooth);
+}
+
+.input-luxury:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+}
+
+.select-luxury {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border-delicate);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.select-luxury:focus {
+  outline: none;
+  border-color: var(--gold-primary);
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+}
+
+/* ==========================================================================
+   ANIMATIONS
+   ========================================================================== */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGold {
+  0% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.5); }
+  70% { box-shadow: 0 0 0 12px rgba(197, 160, 89, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0); }
+}
+
+@keyframes floatGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.animate-float {
+  animation: floatGentle 3s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   RESPONSIVE UTILITIES
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .section-header {
+    margin-bottom: 2.25rem;
+  }
+  .section-title {
+    font-size: 1.85rem;
+  }
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+  .btn {
+    padding: 0.75rem 1.4rem;
+    font-size: 0.82rem;
+  }
+}
